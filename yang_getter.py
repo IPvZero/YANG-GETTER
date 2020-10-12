@@ -1,7 +1,7 @@
 """
 AUTHOR: IPvZero
 DATE: 11th October 2020
-NOTES: This was written was Nornir2 - Nornir3 is the latest version
+NOTES: This script was written using Nornir2 - be aware, Nornir3 is the latest version
 
 You can install Nornir2 using the follow command:
 pip3 install nornir"<3"
