@@ -1,0 +1,3 @@
+pip3 install nornir"<3"
+pip3 install rich
+pip3 install requests
