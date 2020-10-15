@@ -1,5 +1,9 @@
 # YANG-GETTER
-YANG Keyword Getter
+
+---
+date: "2029-05-03"
+tags: ["nornir", "YANG"]
+---
 
 ### Dependencies
 
