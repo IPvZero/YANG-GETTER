@@ -38,6 +38,8 @@ I create instructional videos on Python Network Automation.
 
 [Youtube](https://youtube.com/c/IPvZero)
 
+[LinkedIn](https://www.linkedin.com/in/ipvzero)
+
 ### CBT Nuggets 
 
 [Advanced Network Automation with Cisco and Python](http://learn.gg/adv-net)
