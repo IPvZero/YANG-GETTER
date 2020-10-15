@@ -1,7 +1,7 @@
 # YANG-GETTER
 
 ---
-date: "2029-05-03"
+date: "2020-15-10"
 tags: ["nornir", "YANG"]
 ---
 
