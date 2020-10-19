@@ -6,9 +6,10 @@ You can install Nornir2 using the follow command:
 pip3 install nornir"<3"
 
 
-WARNING: There has been a change to the latest YANG version, 
+WARNING: There has been a change to the latest Cisco-IOXE NATIVE YANG model, 
 in which the OSPF and EIGRP containers have changed names
 to "router-ospf" and "router-eigrp", respectively.
+This code was tested on the Cisco IOS-XE Always On Sandbox running version 16.9.3
 """
 
 import logging
