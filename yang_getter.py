@@ -1,11 +1,14 @@
 """
 AUTHOR: IPvZero
 DATE: 11th October 2020
-NOTES: This script was written using Nornir2 - be aware, Nornir3 is the latest version
-
+NOTES: This script was written using Nornir2 - be aware, Nornir3 is the latest version.
 You can install Nornir2 using the follow command:
 pip3 install nornir"<3"
 
+
+WARNING: There has been a change to the latest YANG version, 
+in which the OSPF and EIGRP containers have changed names
+to "router-ospf" and "router-eigrp", respectively.
 """
 
 import logging
@@ -59,6 +62,8 @@ table.add_row(
 )
 table.add_row("[cyan]memory[/cyan]")
 
+table.add_row("[cyan]vrf-definition[/cyan]")
+
 table.add_row("[cyan]service[/cyan]")
 
 table.add_row("[cyan]platform[/cyan]")
@@ -98,6 +103,8 @@ elif target in ("domain", "ssh", "access-list", "http", "vrf", "cef"):
 elif target in ("GigabitEthernet", "Loopback", "Port-channel"):
     prefix = "interface"
     target = f"{prefix}/{target}"
+elif target == "vrf-definition":
+    target = "vrf"
 elif target == "qos":
     target = "policy"
 elif target in ("class-map", "policy-map"):
@@ -138,10 +145,10 @@ def pullyang(task):
         http_method,
         severity_level=logging.DEBUG,
         verify=False,
-        auth=("john", "cisco"),
+        auth=("developer", "C1sco12345"),
         method="get",
         headers=headers,
-        url=f"https://{task.host.hostname}:443/restconf/data/native/{target}",
+        url=f"https://{task.host.hostname}:9443/restconf/data/native/{target}",
     )
     printer = send.response.json()
     rprint(printer)
