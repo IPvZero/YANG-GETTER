@@ -16,7 +16,7 @@ pip3 install requests
 ### Overview
 This script uses the Nornir framework (version 2!) to simplify the retrieval of device (Cisco IOS-XE) information over RESTCONF. 
 Simply select a keyword and the ```yang_getter.py ``` script will translate the selection into the correct resource URL and send a HTTP GET request to the targeted devices.
-Data will be returned in as a Python dictionary, in form of the Cisco IOS-XE Native YANG model
+Data will be returned as a Python dictionary, in form of the Cisco IOS-XE Native YANG model
 
 ### How to Use
 Simply run the script by typing ```python3 yang_getter.py``` and the script will execute. First a table will appear demonstrating all of the available keywords, after which you can simply type the keyword of the resource you would like to retrieve! Be aware, if you try to pull a resource that isn't configured on the device you will receive an error!
