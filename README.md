@@ -21,7 +21,7 @@ Data will be returned in as a Python dictionary, in form of the Cisco IOS-XE Nat
 ### How to Use
 Simply run the script by typing ```python3 yang_getter.py``` and the script will execute. First a table will appear demonstrating all of the available keywords, after which you can simply type the keyword of the resource you would like to retrieve! Be aware, if you try to pull a resource that isn't configured on the device you will receive an error!
 For example, if you use the "eigrp" keyword - EIGRP must be present on the device.
-If the configuration is not present can add it via the CLI, logging in with the command:
+If a particular configuration is not present you can simply add it via the CLI, logging in with the command:
 ```ssh developer@ios-xe-mgmt.cisco.com -p 8181``` and providing the password of ```C1sco12345```.
 Alternatively, you can configure the always-on Sandbox using other tools such as Postman.
 
