@@ -1,4 +1,8 @@
-R1:
-  hostname: 192.168.31.101
+---
+csr1000v-1:
+  hostname: "ios-xe-mgmt.cisco.com"
+  username: "developer"
+  password: "C1sco12345"
+  port: 9443
   groups:
     - cisco_group
