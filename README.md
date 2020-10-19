@@ -24,7 +24,8 @@ For example, if you use the "eigrp" keyword - EIGRP must be present on the devic
 
 
 ### DEVNET SANDBOX INFORMATION
-This script has been designed on operate on the Cisco IOS-XE Always on Sandbox with 16.x code.
+This script has been designed on operate on the Cisco IOS-XE Always on Sandbox with 16.9.3 code.
+The newer version of this code has a slightly different YANG implementation and will break the "ospf" and "eigrp" features, due to a container name-change!
 You can find a list of Cisco XE sandboxes here: https://developer.cisco.com/docs/ios-xe/#!sandboxes/reservation-based-sandboxes
 
 
