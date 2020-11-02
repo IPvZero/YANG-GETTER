@@ -6,7 +6,7 @@ You can install Nornir2 using the follow command:
 pip3 install nornir"<3"
 
 
-WARNING: There has been a change to the latest Cisco-IOXE NATIVE YANG model, 
+WARNING: There has been a change to the latest Cisco-IOXE NATIVE YANG model,
 in which the OSPF and EIGRP containers have changed names
 to "router-ospf" and "router-eigrp", respectively.
 This code was tested on the Cisco IOS-XE Always On Sandbox running version 16.9.3
@@ -142,6 +142,7 @@ headers = {
 
 
 def pullyang(task):
+    yang_url = f"https://{task.host.hostname}:9443/restconf/data/native/{target}"
     send = task.run(
         http_method,
         severity_level=logging.DEBUG,
@@ -149,11 +150,12 @@ def pullyang(task):
         auth=("developer", "C1sco12345"),
         method="get",
         headers=headers,
-        url=f"https://{task.host.hostname}:9443/restconf/data/native/{target}",
+        url=yang_url,
     )
+
     printer = send.response.json()
+    rprint(f"\nYANG URL: {yang_url}\n")
     rprint(printer)
 
 
 result = nr.run(task=pullyang)
-print_result(result)
